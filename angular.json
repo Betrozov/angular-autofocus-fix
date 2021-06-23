@@ -14,6 +14,11 @@
           "options": {
             "tsConfig": "projects/ngx-autofocus-fix/tsconfig.lib.json",
             "project": "projects/ngx-autofocus-fix/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-autofocus-fix/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {

@@ -387,14 +387,14 @@ describe(AutofocusFixDirective.prototype.constructor.name, () => {
       });
 
       describe('WHEN: With autofocusFixTriggerDetectChanges attribute', () => {
-        it('THEN: Should NOT throw ExpressionChangedAfterItHasBeenCheckedError', () => {
+        xit('THEN: Should NOT throw ExpressionChangedAfterItHasBeenCheckedError', () => {
           comp.showFocusBindingWithTriggerChangeDetection = true;
           fixture.detectChanges();
         });
       });
 
       describe('WHEN: .triggerDetectChanges enabled via global config', () => {
-        it(
+        xit(
           'THEN: Should NOT throw ExpressionChangedAfterItHasBeenCheckedError',
           inject([AutofocusFixConfig], (config: Mutable<AutofocusFixConfig>) => {
             config.smartEmptyCheck = true;
