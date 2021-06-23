@@ -21,6 +21,6 @@
     "rxjs": "6.5.5",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.0",
-    "ngx-autofocus-fix": "file:../../dist/ngx-autofocus-fix"
+    "ngx-autofocus-fix": "../../dist/ngx-autofocus-fix"
   }
 }
