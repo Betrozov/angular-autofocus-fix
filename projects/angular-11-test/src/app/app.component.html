@@ -1,0 +1,19 @@
+<div style="text-align:center">
+  <h1>Welcome to {{ title }}!</h1>
+</div>
+<hr>
+<button (click)="showInput = !showInput">Toggle</button>
+<input type="text" *ngIf="showInput" autofocus>
+<hr>
+<h3>Default inputs:</h3>
+<button e2e-attr="run" (click)="run()">Run</button>
+<div class="inputs">
+  <input type="text"
+         class="autofocus-input"
+         *ngFor="let v of numbers$ | async; index as i" [value]="v"
+         [autofocus]="!(i % 2)"
+         [attr.e2e-attr]="'input-' + i"
+  >
+</div>
+<hr>
+<app-material-test></app-material-test>
