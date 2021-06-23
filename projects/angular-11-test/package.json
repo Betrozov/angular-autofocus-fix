@@ -1,0 +1,26 @@
+{
+  "name": "ngx-autofocus-fix--test",
+  "license": "UNLICENSED",
+  "description": "Test with Angular",
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/korniychuk/angular-autofocus-fix"
+  },
+  "dependencies": {
+    "@angular/cdk": "^11.2.13",
+    "@angular/material": "^11.2.13",
+    "@angular/animations": "11.2.14",
+    "@angular/common": "^11.2.14",
+    "@angular/compiler": "^11.2.14",
+    "@angular/core": "11.2.14",
+    "@angular/forms": "^11.2.14",
+    "@angular/platform-browser": "^11.2.14",
+    "@angular/platform-browser-dynamic": "^11.2.14",
+    "@angular/platform-server": "^11.2.14",
+    "@angular/router": "^11.2.14",
+    "rxjs": "6.5.5",
+    "tslib": "^2.2.0",
+    "zone.js": "~0.11.0",
+    "ngx-autofocus-fix": "file:../../dist/ngx-autofocus-fix"
+  }
+}

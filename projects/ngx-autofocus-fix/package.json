@@ -11,7 +11,7 @@
     "url": "https://korniychuk.pro"
   },
   "engines": {
-    "node": ">=8.0.0 <13.0.0"
+    "node": ">=10.13.x <12.11.x"
   },
   "keywords": [
     "angular-autofocus-fix",
@@ -26,6 +26,7 @@
     "ng7-autofocus",
     "ng8-autofocus",
     "ng9-autofocus",
+    "ng11-autofocus",
     "autofocus",
     "focus",
     "autofocus-directive",
@@ -35,6 +36,7 @@
     "angular7",
     "angular8",
     "angular9",
+    "angular11",
     "ng",
     "ngx"
   ],

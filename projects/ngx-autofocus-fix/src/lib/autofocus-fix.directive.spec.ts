@@ -73,7 +73,7 @@ class SelfFocusingDirective implements OnInit {
       {{ focusBindingDir?.isFocused }} <!-- for triggering ExpressionChangedAfterItHasBeenCheckedError -->
     </div>
     <div *ngIf="showFocusBindingWithTriggerChangeDetection">
-      <input type="text" autofocus autofocusFixTriggerDetectChanges focus-binding>
+      <input type="text" autofocus [autofocusFixTriggerDetectChanges]="true" focus-binding>
       {{ focusBindingDir?.isFocused }} <!-- for triggering ExpressionChangedAfterItHasBeenCheckedError -->
     </div>
     <div *ngIf="showAsync">
@@ -161,9 +161,9 @@ describe(AutofocusFixDirective.prototype.constructor.name, () => {
         expect(comp).toBeTruthy();
       });
       it('should have correct default values', () => {
-        comp.show.forEach(v => expect(v).toBe(false));
-        expect(comp.autofocusValue).toBe(true);
-        expect(comp.smartEmptyCheck).toBe(false);
+        comp.show.forEach(v => expect(v).toEqual(false));
+        expect(comp.autofocusValue).toEqual(true);
+        expect(comp.smartEmptyCheck).toEqual(false);
       });
     });
 
@@ -222,7 +222,7 @@ describe(AutofocusFixDirective.prototype.constructor.name, () => {
           // assert
           const input = getInput(0);
           expect(input).toBeTruthy();
-          expect(input).toBe(getFocused());
+          expect(input).toEqual(getFocused());
         });
       });
 
@@ -235,7 +235,7 @@ describe(AutofocusFixDirective.prototype.constructor.name, () => {
           // assert
           const input = getInput(2);
           expect(input).toBeTruthy();
-          expect(input).toBe(getFocused());
+          expect(input).toEqual(getFocused());
         });
       });
     });
@@ -325,7 +325,7 @@ describe(AutofocusFixDirective.prototype.constructor.name, () => {
           const input2 = getInput(1);
           expect(input1).toBeTruthy();
           expect(input2).toBeTruthy();
-          expect(input2).toBe(getFocused());
+          expect(input2).toEqual(getFocused());
         });
       });
     });
@@ -339,16 +339,16 @@ describe(AutofocusFixDirective.prototype.constructor.name, () => {
           fixture.detectChanges();
 
           // pre assert
-          expect(comp.dir.autofocusFixSmartEmptyCheck).toBe(true);
-          expect(comp.dir.localConfig.smartEmptyCheck).toBe(true);
+          expect(comp.dir.autofocusFixSmartEmptyCheck).toEqual(true);
+          expect(comp.dir.localConfig.smartEmptyCheck).toEqual(true);
 
           // act
           comp.smartEmptyCheck = false;
           fixture.detectChanges();
 
           // assert
-          expect(comp.dir.autofocusFixSmartEmptyCheck).toBe(false);
-          expect(comp.dir.localConfig.smartEmptyCheck).toBe(true);
+          expect(comp.dir.autofocusFixSmartEmptyCheck).toEqual(false);
+          expect(comp.dir.localConfig.smartEmptyCheck).toEqual(true);
         });
       });
     });

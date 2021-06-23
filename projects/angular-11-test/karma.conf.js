@@ -16,15 +16,9 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, '../../coverage/ngx-autofocus-fix'),
+      dir: require('path').join(__dirname, '../../coverage/angular-8-test'),
       reports: ['html', 'lcovonly', 'text-summary'],
-      fixWebpackSourcePaths: true,
-      thresholds: {
-        statements: 100,
-        lines: 100,
-        branches: 100,
-        functions: 100,
-      },
+      fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
@@ -32,12 +26,6 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    customLaunchers: {
-      ChromeHeadlessCI: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      }
-    },
     singleRun: false,
     restartOnFileChange: true
   });

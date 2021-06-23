@@ -12,7 +12,7 @@ describe(moduleName, () => {
         TestBed.configureTestingModule({
           imports: [AutofocusFixModule],
         });
-        const cb = () => TestBed.get(AutofocusFixConfig);
+        const cb = () => TestBed.inject(AutofocusFixConfig);
 
         expect(cb).toThrow();
       });
@@ -23,7 +23,7 @@ describe(moduleName, () => {
         TestBed.configureTestingModule({
           imports: [AutofocusFixModule.forRoot()],
         });
-        const ins = TestBed.get(AutofocusFixConfig);
+        const ins = TestBed.inject(AutofocusFixConfig);
 
         expect(ins instanceof AutofocusFixConfig).toBeTruthy();
       });
@@ -39,7 +39,7 @@ describe(moduleName, () => {
               useValue: new AutofocusFixConfig({}),
             }]
         });
-        const ins = TestBed.get(AutofocusFixConfig);
+        const ins = TestBed.inject(AutofocusFixConfig);
 
         expect(ins instanceof AutofocusFixConfig).toBeTruthy();
       });
